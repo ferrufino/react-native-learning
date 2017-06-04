@@ -7,27 +7,25 @@ import reducers from './reducers';
 import LoginForm from './components/LoginForm';
 
 class App extends Component {
-	componentWillMount(){
-		 const config = {
-		    apiKey: "AIzaSyAmt9uj1qDrAKSiCIPElS8AOkd1pQnUBDA",
-		    authDomain: "manager-22e58.firebaseapp.com",
-		    databaseURL: "https://manager-22e58.firebaseio.com",
-		    projectId: "manager-22e58",
-		    storageBucket: "manager-22e58.appspot.com",
-		    messagingSenderId: "160377097832"
-  		};
-  		firebase.initializeApp(config);
-	}
+  componentWillMount() {
+    const config = {
+      apiKey: 'AIzaSyBR4FTGiOcTZ5OBNi6thE0KhCDR3PaOtQM',
+      authDomain: 'manager-2328b.firebaseapp.com',
+      databaseURL: 'https://manager-2328b.firebaseio.com',
+      storageBucket: 'manager-2328b.appspot.com',
+      messagingSenderId: '193075244299'
+    };
 
+    firebase.initializeApp(config);
+  }
 
-	render() {
-		return (
-			<Provider store={createStore(reducers)}>
-				<LoginForm />
-			</Provider>
-		);
-	}
+  render() {
+    return (
+      <Provider store={createStore(reducers)}>
+        <LoginForm />
+      </Provider>
+    );
+  }
 }
 
 export default App;
-
