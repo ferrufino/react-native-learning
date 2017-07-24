@@ -6,11 +6,11 @@ import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends Component {
 
-  state = { labums: []};
+  state = { albums: []};
 
   componentWillMount() {
 
-    axois.get('').then(response => this.setState({ albums: response.data }));
+    axois.get('https://raw.githubusercontent.com/ferrufino/react-native-learning/master/albumsCalvinHarris/content.json').then(response => this.setState({ albums: response.data }));
   }
   renderAlbums() {
 
